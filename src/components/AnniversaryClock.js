@@ -6,11 +6,15 @@ class AnniversaryClock extends React.Component {
   constructor(props) {
     super(props);
 
-    this.anniversary = moment('2017-07-16');
+    let anniversary = moment('2017-07-16');
+
+    let nextAnniversary = moment({
+      month: anniversary.month(), day: anniversary.day()
+    });
 
     this.state = {
-      timeDated: moment().diff(this.anniversary),
-      timeToAnniversary: 1
+      timeDated: moment().diff(anniversary),
+      timeToAnniversary: nextAnniversary.diff(moment())
     }
   }
 
@@ -27,15 +31,18 @@ class AnniversaryClock extends React.Component {
 
   tick() {
     this.setState((prevState, props) => ({
-      timeDated: prevState.timeDated + 1000
+      timeDated: prevState.timeDated + 1000,
+      timeToAnniversary: prevState.timeToAnniversary - 1000,
     }));
   }
 
   render() {
-    let timePeriod = moment.duration(this.state.timeDated);
+    let timeDated = moment.duration(this.state.timeDated);
+    let timeToAnniversary = moment.duration(this.state.timeToAnniversary);
     return(
-      <div>
-        <Countdown duration={timePeriod}/>
+      <div className="AnniversaryClock">
+        <Countdown duration={timeDated}/>
+        <Countdown duration={timeToAnniversary}/>
       </div>
     );
   }

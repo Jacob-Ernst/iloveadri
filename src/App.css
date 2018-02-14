@@ -47,6 +47,21 @@ body {
   background-image: url('./images/asanoha.png');
 }
 
+.AnniversaryClock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.Countdown {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 750px;
+  width: 100%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

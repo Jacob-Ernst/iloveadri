@@ -6,7 +6,7 @@ class Countdown extends React.Component {
   render() {
     const duration = moment.duration(this.props.duration);
     return(
-      <div>
+      <div className="Countdown">
         <div>
           <p>Years</p>
           <p>{duration.years()}</p>
