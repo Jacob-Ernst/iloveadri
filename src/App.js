@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import heart from './heart.svg';
+import AnniversaryClock from './components/AnniversaryClock';
 import './App.css';
 
 class App extends Component {
@@ -13,6 +14,7 @@ class App extends Component {
             <h1 className="App-title">Jacob</h1>
           </div>
         </header>
+        <AnniversaryClock/>
       </div>
     );
   }
