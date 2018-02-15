@@ -1,12 +1,17 @@
-font-family: 'Amatic SC', cursive;
-font-family: 'Josefin Slab', serif;
-
 body {
   font-family: 'Josefin Slab', serif;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Amatic SC', serif;
+}
+
+h2 {
+  font-size: 1.7rem;
+}
+
+p {
+  font-size: 1.15rem;
 }
 
 .App {

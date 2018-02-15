@@ -41,7 +41,9 @@ class AnniversaryClock extends React.Component {
     let timeToAnniversary = moment.duration(this.state.timeToAnniversary);
     return(
       <div className="AnniversaryClock">
+        <h2>We've Dated for...</h2>
         <Countdown duration={timeDated}/>
+        <h2>Our Anniversary is in...</h2>
         <Countdown duration={timeToAnniversary}/>
       </div>
     );
